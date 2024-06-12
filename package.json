@@ -1,0 +1,24 @@
+{
+  "name": "essam",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.1.6"
+  },
+  "dependencies": {
+    "charming": "^3.0.2",
+    "curtainsjs": "^8.1.6",
+    "gsap": "^3.12.5",
+    "imagesloaded": "^5.0.0",
+    "jquery": "^3.7.1",
+    "lenis": "^1.0.45",
+    "split-type": "^0.3.4",
+    "three": "^0.165.0"
+  }
+}
