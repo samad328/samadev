@@ -51,8 +51,8 @@
 
 @font-face {
   font-family: Ogg;
-  src: url(fonts/Ogg-Medium.eot);
-  src: url(fonts/Ogg-Medium.eot) format('embedded-opentype'),url(fonts/Ogg-Medium.woff2) format('woff2'),url(fonts/Ogg-Medium.woff) format('woff')
+  src: url(/fonts/Ogg-Medium.eot);
+  src: url(/fonts/Ogg-Medium.eot) format('embedded-opentype'),url(/fonts/Ogg-Medium.woff2) format('woff2'),url(/fonts/Ogg-Medium.woff) format('woff')
 }
 
 body {
@@ -321,7 +321,7 @@ p {
 
 .about_img .wrap .img {
   z-index: 2;
-  background: url(images/samad1.png);
+  background: url(/images/samad1.png);
   background-position: center;
   background-size: cover;
   height: 70%;
@@ -332,7 +332,7 @@ p {
 
 .about_img .wrap .img-forground {
   z-index: 1;
-  background: url(images/samad-hover.png);
+  background: url(/images/samad-hover.png);
   background-position: top;
   background-size: cover;
   height: 70%;
@@ -344,6 +344,7 @@ p {
   font-size: calc(3.6rem + .0390625vw);
   line-height: 110%;
   margin-bottom: 7vh;
+  width: 13ch;
 }
 
 .slider {
@@ -626,7 +627,7 @@ a.download-resume {
 
 .four-services {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2,1fr);
   gap: 10%;
 }
 
@@ -1912,6 +1913,13 @@ blockquote p {
   }
 }
 
+@media screen and(max-width:765px){
+  .bio_services .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+}
 @media only screen and (max-width: 800px) {
   .article-header .row,.article_body .row {
       width:auto;
