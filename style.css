@@ -2934,3 +2934,10 @@ grid-area: span 1 / span 1 / span 1 / span 1;
     top: 60px;
   }
 }
+
+@media (max-width:990px) {
+  #spline{
+   
+    margin: 0 auto;
+  }
+}
