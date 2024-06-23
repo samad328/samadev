@@ -15,63 +15,20 @@ import { Draggable } from "gsap/Draggable";
 
 gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,Draggable);
 
-// lenis.start();
+const lenis = new Lenis({
+  lerp: 0.09, // Lower values create a smoother scroll effect
+  smoothWheel: true // Enables smooth scrolling for mouse wheel events
+})
 
+// lenis.on('scroll', console.log)
 
+function raf(time) {
+lenis.raf(time)
+requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf);
 
-// Function to initialize Lenis
-function initializeLenis() {
-    let lenis = new Lenis({
-        lerp: 0.06, // Lower values create a smoother scroll effect
-        smoothWheel: true ,// Enables smooth scrolling for mouse wheel events
-      
-      direction: "vertical",
-      gestureDirection: "vertical",
-      smooth: true,
-      smoothTouch: false,
-      touchMultiplier: 2,
-      infinite: false,
-      autoResize: true,
-    });
-   
-    lenis.on("scroll", (e) => {});
-   
-    function raf(time) {
-       lenis.raf(time);
-       requestAnimationFrame(raf);
-    }
-   
-    requestAnimationFrame(raf);
-   }
-   
-   // Function to check screen width and initialize Lenis if necessary
-   function checkScreenWidthAndInitialize() {
-    if (window.matchMedia("(min-width: 768px)").matches) {
-       initializeLenis();
-    } else {
-       // Screen width is less than or equal to 767 pixels
-      //lenis is not started for mobile devices
-   
-    }
-   }
-   
-   // Check screen width on initial load
-   checkScreenWidthAndInitialize();
-   
-   // Add event listener for when user resizes
-   window.addEventListener('resize', checkScreenWidthAndInitialize);
-
-
-
-
-
-
-
-
-
-
-
-
+lenis.start();
 
   //  
 
