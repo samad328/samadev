@@ -17,7 +17,15 @@ gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,Draggable);
 
 const lenis = new Lenis({
   lerp: 0.06, // Lower values create a smoother scroll effect
-  smoothWheel: true // Enables smooth scrolling for mouse wheel events
+  smoothWheel: true ,// Enables smooth scrolling for mouse wheel events
+
+direction: "vertical",
+gestureDirection: "vertical",
+smooth: true,
+smoothTouch: false,
+touchMultiplier: 2,
+infinite: false,
+autoResize: true,
 })
 
 // lenis.on('scroll', console.log)
