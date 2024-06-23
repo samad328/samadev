@@ -16,7 +16,7 @@ import { Draggable } from "gsap/Draggable";
 gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,Draggable);
 
 const lenis = new Lenis({
-  lerp: 0.09, // Lower values create a smoother scroll effect
+  lerp: 0.08, // Lower values create a smoother scroll effect
   smoothWheel: true // Enables smooth scrolling for mouse wheel events
 })
 
