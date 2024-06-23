@@ -15,20 +15,20 @@ import { Draggable } from "gsap/Draggable";
 
 gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,Draggable);
 
-// const lenis = new Lenis({
-//   lerp: 0.08, // Lower values create a smoother scroll effect
-//   smoothWheel: true // Enables smooth scrolling for mouse wheel events
-// })
+const lenis = new Lenis({
+  lerp: 0.05, // Lower values create a smoother scroll effect
+  smoothWheel: true // Enables smooth scrolling for mouse wheel events
+})
 
-// // lenis.on('scroll', console.log)
+// lenis.on('scroll', console.log)
 
-// function raf(time) {
-// lenis.raf(time)
-// requestAnimationFrame(raf)
-// }
-// requestAnimationFrame(raf);
+function raf(time) {
+lenis.raf(time)
+requestAnimationFrame(raf)
+}
+requestAnimationFrame(raf);
 
-// lenis.start();
+lenis.start();
 
   //  
 
